@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tainara Azevedo - Psicóloga | Neuropsicóloga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-blue: #1d4ed8;
+      --secondary-pink: #ef96ab;
+      --soft-pink: #f8c8d4;
+      --light-blue: #6b87d1;
+      --dark: #1f2937;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --white: #ffffff;
+      --gradient-clinical: linear-gradient(135deg, #fdf2f8 0%, #e0e7ff 100%);
+      --gradient-pastel: linear-gradient(135deg, #a5b4fc 0%, #fbcfe8 50%, #e0e7ff 100%);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--white);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--primary-blue);
+      text-decoration: none;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--secondary-pink);
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-blue);
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-blue);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-whatsapp:hover {
+      background: #163cb3;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(29,78,216,0.3);
+    }
+
+    .btn-whatsapp-green {
+      background: #25D366;
+    }
+
+    .btn-whatsapp-green:hover {
+      background: #1fb855;
+      box-shadow: 0 8px 25px rgba(37,211,102,0.3);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background: var(--primary-blue);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--gradient-clinical);
+      padding: 160px 0 100px;
+      position: relative;
+      overflow: hidden;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero .container {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      color: var(--primary-blue);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: var(--dark);
+    }
+
+    .hero h1 .highlight {
+      color: var(--primary-blue);
+    }
+
+    .hero-divider {
+      width: 80%;
+      height: 2px;
+      background: rgba(255,255,255,0.5);
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(31,41,55,0.8);
+      max-width: 550px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+    }
+
+    .hero-image img {
+      max-height: 600px;
+      object-fit: contain;
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      background: var(--secondary-pink);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 20px 28px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .hero-floating-badge.review {
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hero-floating-badge .big-number {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .hero-floating-badge .label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    .hero-floating-badge.contact {
+      top: 0;
+      right: 0;
+      background: var(--primary-blue);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+    }
+
+    .hero-floating-badge.contact .icon-circle {
+      width: 44px;
+      height: 44px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-floating-badge.contact .icon-circle svg {
+      color: var(--primary-blue);
+    }
+
+    /* ===== FEATURES ===== */
+    .features {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .feature-card {
+      padding: 32px;
+      border-radius: 40px;
+      color: var(--white);
+      transition: all 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .feature-card.pink { background: var(--secondary-pink); }
+    .feature-card.soft-pink { background: var(--soft-pink); }
+    .feature-card.blue { background: var(--primary-blue); }
+    .feature-card.light-blue { background: var(--light-blue); }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-tag {
+      color: var(--primary-blue);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .section-title .highlight {
+      color: var(--primary-blue);
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .about .container {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-images {
+      flex: 1;
+      position: relative;
+    }
+
+    .about-main-img {
+      width: 100%;
+      height: 450px;
+      border-radius: 40px;
+      overflow: hidden;
+    }
+
+    .about-main-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-circle-img {
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 6px solid var(--white);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .about-circle-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-experience-badge {
+      position: absolute;
+      bottom: -16px;
+      right: -16px;
+      background: var(--secondary-pink);
+      color: var(--white);
+      padding: 20px 32px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .about-experience-badge .number {
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .about-experience-badge .text {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content p {
+      color: var(--gray);
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+      list-style: none;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .checklist li svg {
+      color: var(--primary-blue);
+      flex-shrink: 0;
+    }
+
+    .about-quote {
+      font-style: italic;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      line-height: 1.5;
+      color: var(--dark);
+    }
+
+    /* ===== HOW WE WORK ===== */
+    .how-we-work {
+      padding: 100px 0;
+      background: var(--gradient-pastel);
+      position: relative;
+    }
+
+    .how-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 60px;
+      gap: 40px;
+    }
+
+    .how-header-left {
+      max-width: 650px;
+    }
+
+    .how-header-right {
+      max-width: 400px;
+      padding-top: 20px;
+    }
+
+    .how-header-right p {
+      color: #4b5563;
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+
+    .how-divider {
+      border: none;
+      border-top: 2px solid rgba(255,255,255,0.4);
+      margin-bottom: 60px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .step-number {
+      font-size: 5rem;
+      font-weight: 900;
+      color: rgba(29,78,216,0.15);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .step h4 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      color: #4b5563;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .service-card {
+      border-radius: 40px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    }
+
+    .service-card-img {
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .service-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .service-card:hover .service-card-img img {
+      transform: scale(1.1);
+    }
+
+    .service-card-body {
+      background: #fdf2f8;
+      padding: 40px 32px 32px;
+      position: relative;
+    }
+
+    .service-card-body h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+
+    .service-card-body hr {
+      border: none;
+      border-top: 1px solid rgba(29,78,216,0.2);
+      margin-bottom: 16px;
+    }
+
+    .service-card-body p {
+      color: #4b5563;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ===== AREAS ===== */
+    .areas {
+      padding: 100px 0;
+      background: var(--light-gray);
+    }
+
+    .areas-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .area-card {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: all 0.3s;
+      border-left: 4px solid var(--primary-blue);
+    }
+
+    .area-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .area-card h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--primary-blue);
+    }
+
+    .area-card p {
+      color: var(--gray);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ===== DIFFERENTIALS ===== */
+    .differentials {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .diff-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 24px;
+      border-radius: 20px;
+      background: var(--light-gray);
+      transition: all 0.3s;
+    }
+
+    .diff-card:hover {
+      background: #fdf2f8;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .diff-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .diff-icon svg {
+      color: var(--white);
+    }
+
+    .diff-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .diff-card p {
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-clinical);
+      opacity: 0.6;
+    }
+
+    .contact .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .contact-box {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      display: flex;
+    }
+
+    .contact-form {
+      flex: 1.2;
+      padding: 48px;
+    }
+
+    .contact-form .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-form .form-full {
+      grid-column: 1 / -1;
+    }
+
+    .contact-form label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      outline: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 3px rgba(29,78,216,0.1);
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .contact-info {
+      flex: 1;
+      background: var(--soft-pink);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact-info h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 16px;
+      color: var(--dark);
+    }
+
+    .contact-info > p {
+      color: rgba(31,41,55,0.7);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .contact-item-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item-icon svg {
+      color: var(--white);
+    }
+
+    .contact-item-label {
+      font-size: 0.75rem;
+      color: var(--primary-blue);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .contact-item-value {
+      font-weight: 700;
+      color: var(--dark);
+      font-size: 1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--primary-blue);
+      color: var(--white);
+      padding: 80px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.5fr 1fr 1.5fr;
+      gap: 40px;
+      padding-bottom: 60px;
+    }
+
+    .footer-brand p {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--secondary-pink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .footer-social a:hover {
+      transform: scale(1.1);
+    }
+
+    .footer h4 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--secondary-pink);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-pink);
+    }
+
+    .footer-contact-item {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-contact-item .label {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .footer-contact-item .value {
+      font-weight: 600;
+    }
+
+    .footer-contact-item a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--secondary-pink);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 24px 0;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+    }
+
+    /* ===== WHATSAPP FLOAT ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+    }
+
+    .whatsapp-float svg {
+      color: white;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-divider {
+        margin: 0 auto 24px;
+      }
+
+      .hero p {
+        margin: 0 auto 32px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image {
+        display: none;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about .container {
+        flex-direction: column;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .how-header {
+        flex-direction: column;
+      }
+
+      .contact-box {
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .mobile-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--white);
+        z-index: 200;
+        padding: 80px 24px 24px;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .mobile-nav.active {
+        display: flex;
+      }
+
+      .mobile-nav a {
+        display: block;
+        padding: 16px 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--dark);
+        text-decoration: none;
+        border-bottom: 1px solid #f3f4f6;
+      }
+
+      .mobile-nav .close-btn {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--dark);
+      }
+
+      .hero {
+        padding: 130px 0 60px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form {
+        padding: 32px 24px;
+      }
+
+      .contact-form .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        padding: 32px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .diff-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        Tainara Azevedo
+        <span>Psicóloga | Neuropsicóloga</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#areas">Áreas de Atendimento</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/5521999999999" target="_blank" class="btn-whatsapp btn-whatsapp-green" style="display: inline-flex;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar Consulta
+      </a>
+      <button class="hamburger" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="close-btn" onclick="toggleMobileNav()">&times;</button>
+    <a href="#inicio" onclick="toggleMobileNav()">Início</a>
+    <a href="#sobre" onclick="toggleMobileNav()">Sobre</a>
+    <a href="#servicos" onclick="toggleMobileNav()">Serviços</a>
+    <a href="#diferenciais" onclick="toggleMobileNav()">Diferenciais</a>
+    <a href="#areas" onclick="toggleMobileNav()">Áreas de Atendimento</a>
+    <a href="#contato" onclick="toggleMobileNav()">Contato</a>
+    <a href="https://wa.me/5521999999999" target="_blank" style="color: #25D366; font-weight: 800;">WhatsApp</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">ACOLHIMENTO &bull; ÉTICA &bull; CUIDADO HUMANIZADO</span>
+        <h1>Cuidando da sua <span class="highlight">Saúde Mental</span> com Ciência e Acolhimento</h1>
+        <div class="hero-divider"></div>
+        <p>Psicóloga e Neuropsicóloga especializada em reabilitação cognitiva domiciliar para idosos e psicologia clínica online. Atendimento humanizado, sigiloso e baseado em evidências científicas.</p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/5521999999999" target="_blank" class="btn-whatsapp btn-whatsapp-green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar via WhatsApp
+          </a>
+          <a href="#servicos" class="btn-whatsapp" style="background: var(--dark);">Conheça os Serviços</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1d006bdb-69fd-4590-a131-c6d4ed9d74be-nuro-widagdos-net/assets/images/office-lifestyle-business-and-people-concept-fri-2-2.png" alt="Tainara Azevedo - Psicóloga e Neuropsicóloga">
+        <div class="hero-floating-badge review">
+          <div class="big-number">CRP</div>
+          <div class="label">Registro Ativo</div>
+        </div>
+        <div class="hero-floating-badge contact">
+          <div class="icon-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:0.75rem;opacity:0.8;">Agende agora</div>
+            <div style="font-weight:700;font-size:1rem;">WhatsApp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card pink">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1"/></svg>
+          </div>
+          <h3>Atendimento Domiciliar</h3>
+          <p>Reabilitação cognitiva especializada no conforto da sua casa, na Zona Sul do RJ.</p>
+        </div>
+        <div class="feature-card soft-pink">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Terapia Online</h3>
+          <p>Psicologia clínica online com sigilo, acolhimento e flexibilidade para todo o Brasil.</p>
+        </div>
+        <div class="feature-card blue">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3>Estimulação Cognitiva</h3>
+          <p>Treino de memória, atenção e funções executivas para idosos com base científica.</p>
+        </div>
+        <div class="feature-card light-blue">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Orientação Familiar</h3>
+          <p>Devolutiva e orientação para familiares e cuidadores sobre o tratamento do idoso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="about-images">
+        <div class="about-main-img">
+          <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1d006bdb-69fd-4590-a131-c6d4ed9d74be-nuro-widagdos-net/assets/images/people-attending-support-group-meeting-for-mental--3.jpg" alt="Atendimento psicológico">
+        </div>
+        <div class="about-circle-img">
+          <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1d006bdb-69fd-4590-a131-c6d4ed9d74be-nuro-widagdos-net/assets/images/men-and-women-sitting-in-a-circle-during-group-the-4.jpg" alt="Sessão de terapia">
+        </div>
+        <div class="about-experience-badge">
+          <div class="number">Zona Sul</div>
+          <div class="text">Rio de Janeiro</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">SOBRE MIM</span>
+        <h2 class="section-title">Tainara Azevedo <span class="highlight">Psicóloga | Neuropsicóloga</span></h2>
+        <p>Sou psicóloga e neuropsicóloga com foco em reabilitação cognitiva e psicologia clínica. Meu trabalho é pautado em acolhimento, ética, cuidado humanizado, respeito à singularidade, embasamento científico e promoção de autonomia e qualidade de vida.</p>
+        <p>Ofereço atendimento domiciliar especializado em idosos na Zona Sul do Rio de Janeiro e psicoterapia online para adultos em todo o Brasil.</p>
+        <ul class="checklist">
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Abordagem Sistêmica
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Baseada em Evidências
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Atendimento Humanizado
+          </li>
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Sigilo Profissional
+          </li>
+        </ul>
+        <p class="about-quote">"Cuidar da saúde mental é um ato de coragem. Estou aqui para caminhar ao seu lado nessa jornada de autoconhecimento e bem-estar."</p>
+        <a href="https://wa.me/5521999999999" target="_blank" class="btn-whatsapp">Entre em Contato</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="how-we-work">
+    <div class="container">
+      <div class="how-header">
+        <div class="how-header-left">
+          <span class="section-tag">COMO FUNCIONA?</span>
+          <h2 class="section-title">Cuidando da sua <span class="highlight">Saúde</span>,<br>Cuidando do seu <span class="highlight">Bem-estar</span></h2>
+        </div>
+        <div class="how-header-right">
+          <p>Um processo terapêutico estruturado e acolhedor, pensado para atender suas necessidades com profissionalismo e empatia.</p>
+          <a href="https://wa.me/5521999999999" target="_blank" class="btn-whatsapp">Agende Agora</a>
+        </div>
+      </div>
+      <hr class="how-divider">
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h4>Escuta e Avaliação</h4>
+          <p>Realizo uma avaliação inicial detalhada para compreender suas necessidades, histórico e objetivos. Cada pessoa é única e merece um olhar individualizado.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h4>Plano Terapêutico</h4>
+          <p>Elaboro um plano terapêutico personalizado com metas claras, incluindo estimulação de memória, atenção e funções executivas quando necessário.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h4>Acompanhamento</h4>
+          <p>Acompanhamento contínuo com devolutivas para pacientes e familiares, promovendo autonomia, qualidade de vida e bem-estar emocional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="services-header">
+        <span class="section-tag">SERVIÇOS</span>
+        <h2 class="section-title">Atendimento <span class="highlight">Especializado</span> para Você</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1d006bdb-69fd-4590-a131-c6d4ed9d74be-nuro-widagdos-net/assets/images/female-college-student-meeting-with-campus-counsel-6.jpg" alt="Reabilitação Cognitiva Domiciliar">
+          </div>
+          <div class="service-card-body">
+            <h3>Reabilitação Cognitiva Domiciliar</h3>
+            <hr>
+            <p>Atendimento especializado em idosos com Alzheimer, demências, pós-AVC ou declínio cognitivo. Estimulação de memória, atenção e funções executivas no conforto do lar, na Zona Sul do RJ.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1d006bdb-69fd-4590-a131-c6d4ed9d74be-nuro-widagdos-net/assets/images/a-portrait-of-young-depressed-woman-during-group-t-7.jpg" alt="Psicologia Clínica Online">
+          </div>
+          <div class="service-card-body">
+            <h3>Psicologia Clínica Online</h3>
+            <hr>
+            <p>Psicoterapia online para adultos com ansiedade, depressão, dificuldades emocionais e relacionais. Atendimento sigiloso, humanizado e com abordagem sistêmica para todo o Brasil.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1d006bdb-69fd-4590-a131-c6d4ed9d74be-nuro-widagdos-net/assets/images/unhappy-woman-attending-self-help-therapy-group-me-8.jpg" alt="Avaliação Neuropsicológica">
+          </div>
+          <div class="service-card-body">
+            <h3>Avaliação Neuropsicológica</h3>
+            <hr>
+            <p>Avaliação completa das funções cognitivas com devolutiva detalhada e plano de intervenção personalizado. Orientação para familiares e cuidadores sobre o diagnóstico e tratamento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIALS -->
+  <section class="differentials" id="diferenciais">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section-tag">POR QUE ME ESCOLHER?</span>
+        <h2 class="section-title">Meus <span class="highlight">Diferenciais</span></h2>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1"/></svg>
+          </div>
+          <div>
+            <h4>Atendimento Domiciliar Especializado</h4>
+            <p>Cuidado personalizado no conforto do lar, voltado exclusivamente para idosos.</p>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <div>
+            <h4>Formação em Neuropsicologia</h4>
+            <p>Foco em reabilitação cognitiva com embasamento científico atualizado.</p>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h4>Avaliação Inicial + Plano com Metas</h4>
+            <p>Cada paciente recebe um plano terapêutico estruturado e personalizado.</p>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+          </div>
+          <div>
+            <h4>Estimulação de Funções Cognitivas</h4>
+            <p>Trabalho focado em memória, atenção e funções executivas com técnicas comprovadas.</p>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div>
+            <h4>Devolutiva para Familiares</h4>
+            <p>Orientação completa para familiares e cuidadores sobre o processo terapêutico.</p>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h4>Atendimento Online Sigiloso</h4>
+            <p>Psicoterapia online com total privacidade, abordagem humanizada e baseada em evidências.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS OF SERVICE -->
+  <section class="areas" id="areas">
+    <div class="container">
+      <div class="areas-header">
+        <span class="section-tag">ÁREAS DE ATENDIMENTO</span>
+        <h2 class="section-title">Onde <span class="highlight">Atendo</span></h2>
+      </div>
+      <div class="areas-grid">
+        <div class="area-card">
+          <h3>Reabilitação Cognitiva Presencial</h3>
+          <p>Zona Sul do Rio de Janeiro: Copacabana, Ipanema, Leblon, Lagoa, Botafogo, Jardim Botânico, Urca, Catete, Flamengo, Gávea, Glória, Humaitá, Laranjeiras, Leme e São Conrado.</p>
+        </div>
+        <div class="area-card">
+          <h3>Psicologia Clínica Online</h3>
+          <p>Atendimento para todo o Brasil, sem restrição geográfica. Sessões por videoconferência com total sigilo e conforto.</p>
+        </div>
+        <div class="area-card">
+          <h3>Público: Reabilitação Cognitiva</h3>
+          <p>Familiares de idosos com queixas de memória, idosos com Alzheimer, demências, pós-AVC ou declínio cognitivo, filhos e cuidadores que buscam atendimento especializado em casa.</p>
+        </div>
+        <div class="area-card">
+          <h3>Público: Psicologia Online</h3>
+          <p>Adultos com ansiedade, depressão, dificuldades emocionais e relacionais. Profissionais com rotina intensa e pessoas que buscam autoconhecimento e saúde mental.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contato">
+    <div class="container">
+      <div class="contact-header">
+        <span class="section-tag">ENTRE EM CONTATO</span>
+        <h2 class="section-title">Dê o <span class="highlight">primeiro passo</span> rumo ao seu <span class="highlight">bem-estar</span></h2>
+      </div>
+      <div class="contact-box">
+        <div class="contact-form">
+          <form class="form-grid" onsubmit="return false;">
+            <div>
+              <label>Nome</label>
+              <input type="text" placeholder="Seu nome completo">
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" placeholder="Seu email">
+            </div>
+            <div>
+              <label>Telefone</label>
+              <input type="tel" placeholder="(21) 99999-9999">
+            </div>
+            <div>
+              <label>Assunto</label>
+              <input type="text" placeholder="Reabilitação Cognitiva / Psicologia Online">
+            </div>
+            <div class="form-full">
+              <label>Mensagem</label>
+              <textarea placeholder="Conte um pouco sobre o que você procura..."></textarea>
+            </div>
+            <div class="form-full">
+              <a href="https://wa.me/5521999999999" target="_blank" class="btn-whatsapp btn-whatsapp-green" style="width:100%;justify-content:center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Enviar pelo WhatsApp
+              </a>
+            </div>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h3>Precisa de Ajuda? Fale Comigo</h3>
+          <p>Cada passo em direção ao cuidado com a saúde mental é uma conquista. Estou aqui para te acompanhar nessa jornada com acolhimento e profissionalismo.</p>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">WhatsApp</div>
+              <div class="contact-item-value">(21) 99999-9999</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">contato@tainaraazevedo.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Atendimento Presencial</div>
+              <div class="contact-item-value">Zona Sul - Rio de Janeiro, RJ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" style="color: white; font-size: 1.3rem; text-decoration: none; display: inline-block; margin-bottom: 20px;">
+            Tainara Azevedo
+            <span style="display:block; font-size:0.75rem; color: var(--secondary-pink); font-weight:600;">Psicóloga | Neuropsicóloga</span>
+          </a>
+          <p>Atendimento humanizado, sigiloso e baseado em evidências científicas. Reabilitação cognitiva domiciliar e psicologia clínica online.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://wa.me/5521999999999" target="_blank" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <div class="footer-contact-item">
+            <div class="label">Atendimento Presencial</div>
+            <div class="value">Zona Sul - Rio de Janeiro, RJ</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="label">Email</div>
+            <a href="mailto:contato@tainaraazevedo.com">contato@tainaraazevedo.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <div class="label">WhatsApp</div>
+            <a href="https://wa.me/5521999999999" target="_blank">(21) 99999-9999</a>
+          </div>
+        </div>
+        <div>
+          <h4>Links Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#areas">Áreas</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Serviços</h4>
+          <ul class="footer-links">
+            <li><a href="#servicos">Reabilitação Cognitiva</a></li>
+            <li><a href="#servicos">Psicologia Clínica Online</a></li>
+            <li><a href="#servicos">Avaliação Neuropsicológica</a></li>
+            <li><a href="#servicos">Orientação Familiar</a></li>
+            <li><a href="#servicos">Estimulação Cognitiva</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tainara Azevedo - Psicóloga | Neuropsicóloga. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/5521999999999" target="_blank" class="whatsapp-float" aria-label="Contato via WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #1f2937;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #1f2937;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1f2937;
+
+  --color-primary: #1d4ed8;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #ef96ab;
+  --color-secondary-foreground: #ffffff;
+
+  --color-muted: #f3f4f6;
+  --color-muted-foreground: #6b7280;
+
+  --color-accent: #f8c8d4;
+  --color-accent-foreground: #1d4ed8;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: #e5e7eb;
+  --color-input: #e5e7eb;
+  --color-ring: #1d4ed8;
+
+  --color-chart-1: #1d4ed8;
+  --color-chart-2: #ef96ab;
+  --color-chart-3: #6b87d1;
+  --color-chart-4: #f8c8d4;
+  --color-chart-5: #1f2937;
+
+  --color-sidebar: #ffffff;
+  --color-sidebar-foreground: #1f2937;
+  --color-sidebar-primary: #1d4ed8;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #f8c8d4;
+  --color-sidebar-accent-foreground: #1d4ed8;
+  --color-sidebar-border: #e5e7eb;
+  --color-sidebar-ring: #1d4ed8;
+
+  --color-brand-blue: #1d4ed8;
+  --color-brand-pink: #ef96ab;
+  --color-brand-light-blue: #6b87d1;
+  --color-brand-soft-pink: #f8c8d4;
+  --color-brand-dark: #1f2937;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-xl: 2.5rem;
+  --radius-lg: 1.5rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border);
+  }
+
+  :root {
+    --background: #ffffff;
+    --foreground: #1f2937;
+    --card: #ffffff;
+    --card-foreground: #1f2937;
+    --popover: #ffffff;
+    --popover-foreground: #1f2937;
+    --primary: #1d4ed8;
+    --primary-foreground: #ffffff;
+    --secondary: #ef96ab;
+    --secondary-foreground: #ffffff;
+    --muted: #f3f4f6;
+    --muted-foreground: #6b7280;
+    --accent: #f8c8d4;
+    --accent-foreground: #1d4ed8;
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+    --border: #e5e7eb;
+    --input: #e5e7eb;
+    --ring: #1d4ed8;
+    --radius: 1.5rem;
+    --sidebar-background: #ffffff;
+    --sidebar-foreground: #1f2937;
+    --sidebar-primary: #1d4ed8;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f8c8d4;
+    --sidebar-accent-foreground: #1d4ed8;
+    --sidebar-border: #e5e7eb;
+    --sidebar-ring: #1d4ed8;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-black tracking-tight text-brand-dark;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1320px;
+  }
+
+  .btn-pill {
+    @apply rounded-full px-8 py-3 font-semibold transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+
+  .clinical-gradient {
+    background: linear-gradient(135deg, #fdf2f8 0%, #e0e7ff 100%);
+  }
+
+  .soft-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .section-padding {
+    @apply py-20;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
