@@ -1,7 +1,0 @@
-{
-  "projectId": "1d006bdb-69fd-4590-a131-c6d4ed9d74be",
-  "createdAt": 1771023879348,
-  "version": "1.0",
-  "startupCommands": ["python3 -m http.server 3000"],
-  "templateId": "any"
-}
