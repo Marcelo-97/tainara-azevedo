@@ -23,10 +23,12 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <div className="mb-6">
               <a href="/">
-                <img 
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1d006bdb-69fd-4590-a131-c6d4ed9d74be-nuro-widagdos-net/assets/images/Footer-Logo-17.png" 
-                  alt="Nuro Psychology Logo" 
+                <img
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1d006bdb-69fd-4590-a131-c6d4ed9d74be-nuro-widagdos-net/assets/images/Footer-Logo-17.png"
+                  alt="Nuro Psychology Logo"
                   className="h-[63px] w-auto brightness-0 invert"
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
             </div>
