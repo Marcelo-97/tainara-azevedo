@@ -100,50 +100,50 @@
     ]
   },
   {
-    "original": "../images (1).jpg",
+    "original": "../images-1.jpg",
     "variants": [
       {
-        "src": "optimized/images (1)-400.avif",
+        "src": "optimized/images-1-400.avif",
         "width": 400,
         "format": "avif"
       },
       {
-        "src": "optimized/images (1)-400.webp",
+        "src": "optimized/images-1-400.webp",
         "width": 400,
         "format": "webp"
       },
       {
-        "src": "optimized/images (1)-400.jpg",
+        "src": "optimized/images-1-400.jpg",
         "width": 400,
         "format": "jpg"
       },
       {
-        "src": "optimized/images (1)-800.avif",
+        "src": "optimized/images-1-800.avif",
         "width": 800,
         "format": "avif"
       },
       {
-        "src": "optimized/images (1)-800.webp",
+        "src": "optimized/images-1-800.webp",
         "width": 800,
         "format": "webp"
       },
       {
-        "src": "optimized/images (1)-800.jpg",
+        "src": "optimized/images-1-800.jpg",
         "width": 800,
         "format": "jpg"
       },
       {
-        "src": "optimized/images (1)-1200.avif",
+        "src": "optimized/images-1-1200.avif",
         "width": 1200,
         "format": "avif"
       },
       {
-        "src": "optimized/images (1)-1200.webp",
+        "src": "optimized/images-1-1200.webp",
         "width": 1200,
         "format": "webp"
       },
       {
-        "src": "optimized/images (1)-1200.jpg",
+        "src": "optimized/images-1-1200.jpg",
         "width": 1200,
         "format": "jpg"
       }
